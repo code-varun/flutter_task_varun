@@ -10,14 +10,10 @@ class GetData {
     List<Users> chars = [];
     var npurl = Uri.parse(apiUrl + '?limit=$limit&offset=$offset');
 
-    print("API CALLED BEFORE object1");
     var response = await client.get(npurl);
-    print("aPI CALL AFTER object2");
-    print(response.statusCode.toString());
 
     if (response.statusCode == 200) {
       chars = usersFromJson(response.body);
-      print(chars[0].name);
     }
 
     return chars;

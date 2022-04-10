@@ -3,7 +3,6 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:provider/provider.dart';
 import 'package:tudo_task/providers/charprovider.dart';
 import 'package:tudo_task/views/detailspage/detailpage.dart';
-// import 'package:intl/intl_browser.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -56,6 +55,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     var data = Provider.of<CharProvider>(context);
+
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -100,16 +100,29 @@ class _HomePageState extends State<HomePage> {
                                                         width: 1.0,
                                                         color:
                                                             Colors.white24))),
-                                            child: Image.network(data
-                                                .temp[index].img
-                                                .toString())),
+                                            child: Image.network(
+                                              data.temp[index].img.toString(),
+                                              width: 75,
+                                              height: 100,
+                                              fit: BoxFit.fill,
+                                              loadingBuilder: (context, child,
+                                                  loadingProgress) {
+                                                if (loadingProgress == null)
+                                                  return child;
+
+                                                return CircularProgressIndicator();
+                                              },
+                                              errorBuilder: (context, error,
+                                                      stackTrace) =>
+                                                  const Text(
+                                                      'Some errors occurred!'),
+                                            )),
                                         title: Text(
                                           data.temp[index].name.toString(),
                                           style: TextStyle(
                                               color: Colors.white,
                                               fontWeight: FontWeight.bold),
                                         ),
-
                                         subtitle: Row(
                                           mainAxisSize: MainAxisSize.min,
                                           children: <Widget>[
@@ -120,14 +133,8 @@ class _HomePageState extends State<HomePage> {
                                                     color: Colors.white))
                                           ],
                                         ),
-                                        // trailing:
-
-                                        //  Icon(Icons.call,
-                                        //     color: Colors.white,
-                                        //     size: 30.0)
                                       )),
                                 ),
-                                // Text(data.temp[index].name.toString())
                               ),
                             );
                           },
