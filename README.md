@@ -6,7 +6,7 @@ A new Flutter project.
 
 Screen shots : 
 # Screen 1 
-<img src="https://cdn.discordapp.com/attachments/560546777753976832/962971616042700840/Screenshot_20220411-123147.jpg" width="50%" height="30%">
+<img src="https://cdn.discordapp.com/attachments/560546777753976832/962971616042700840/Screenshot_20220411-123147.jpg" width="50%" height="20%">
 
 # SCREENSHOT 
 
