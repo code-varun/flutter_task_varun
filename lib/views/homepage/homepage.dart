@@ -74,6 +74,7 @@ class _HomePageState extends State<HomePage> {
                           itemCount: data.temp.length,
                           itemBuilder: (context, index) {
                             return ListTile(
+                              dense: true,
                               title: InkWell(
                                 onTap: (() => Navigator.push(
                                     context,
@@ -81,13 +82,19 @@ class _HomePageState extends State<HomePage> {
                                         builder: (context) =>
                                             DetailChar(data.temp, index)))),
                                 child: Card(
-                                  elevation: 8.0,
+                                  elevation: 2.0,
                                   margin: new EdgeInsets.symmetric(
-                                      horizontal: 10.0, vertical: 6.0),
+                                      horizontal: 4.0, vertical: 6.0),
                                   child: Container(
                                       decoration: BoxDecoration(
-                                          color:
-                                              Color.fromRGBO(64, 75, 96, .9)),
+                                        gradient: LinearGradient(
+                                            colors: [
+                                              Color.fromARGB(255, 57, 117, 113),
+                                              Color.fromARGB(255, 62, 182, 226)
+                                            ],
+                                            begin: Alignment.topCenter,
+                                            end: Alignment.bottomCenter),
+                                      ),
                                       child: ListTile(
                                         contentPadding: EdgeInsets.symmetric(
                                             horizontal: 20.0, vertical: 10.0),
