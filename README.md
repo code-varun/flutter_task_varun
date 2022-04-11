@@ -5,20 +5,6 @@ A new Flutter project.
 ## Getting Started
 
 Screen shots : 
-# Screen 1 
-<img src="https://cdn.discordapp.com/attachments/560546777753976832/962971616042700840/Screenshot_20220411-123147.jpg" width="50%" height="20%">
-
-# SCREENSHOT 
-
-<img src="https://media.discordapp.net/attachments/560546777753976832/962971616327921704/Screenshot_20220411-123202.jpg?width=328&height=692" width="50%" height="50%">
-
-# Screenshot 
-<img src="https://media.discordapp.net/attachments/560546777753976832/962971616592138321/Screenshot_20220411-123207.jpg?width=328&height=692" width="50%" height="50%">
-
-
-# Screenshot
-
-<img src="https://cdn.discordapp.com/attachments/560546777753976832/962971616847994880/Screenshot_20220411-123213.jpg" width="50%" height="50%">
 
 #Screenshot
 
