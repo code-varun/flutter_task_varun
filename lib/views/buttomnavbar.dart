@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:tudo_task/providers/buttomnavbarprovider.dart';
 
 import 'package:tudo_task/views/homepage/homepage.dart';
+import 'package:tudo_task/views/homepage/homepage1.dart';
 import 'package:tudo_task/views/maps/tudomaps.dart';
 
 class BottomNavBar extends StatefulWidget {
@@ -23,14 +24,15 @@ class _BottomNavBarState extends State<BottomNavBar> {
     Icon(Icons.home),
     Icon(Icons.map),
   ];
-  List<String> title = ["Homepage", "Explore"];
+  List<String> title = ["Homepage", "Search"];
 
   @override
   Widget build(BuildContext context) {
     var provider = Provider.of<BottomNavigationBarProvider>(context);
 
     List<Widget> _widgetOptions = <Widget>[
-      HomePage(),
+      // HomePage(),
+      HomepageGyt(),
       FlutterMap(),
     ];
     return Scaffold(
