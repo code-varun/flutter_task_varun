@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:tudo_task/providers/buttomnavbarprovider.dart';
+import 'package:tudo_task/views/homepage/home_screen.dart';
 
 import 'package:tudo_task/views/homepage/homepage.dart';
 import 'package:tudo_task/views/homepage/homepage1.dart';
@@ -32,7 +33,8 @@ class _BottomNavBarState extends State<BottomNavBar> {
 
     List<Widget> _widgetOptions = <Widget>[
       // HomePage(),
-      HomepageGyt(),
+      // HomepageGyt(),
+      HomeScreen(),
       FlutterMap(),
     ];
     return Scaffold(

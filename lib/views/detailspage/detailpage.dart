@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:tudo_task/models/book_model.dart';
 import 'package:tudo_task/models/charmodel.dart';
 
 class DetailChar extends StatefulWidget {
   DetailChar(this.data, this.index, {Key? key}) : super(key: key);
 
-  final List<Users> data;
-  final int index;
+  final BookModel data;
+  final String? index;
 
   @override
   State<DetailChar> createState() => _DetailCharState();
@@ -16,6 +17,7 @@ class _DetailCharState extends State<DetailChar> {
   late var data = widget.data;
   @override
   Widget build(BuildContext context) {
+    print(data.title);
     return Scaffold(
       body: CustomScrollView(
         slivers: [
@@ -30,21 +32,21 @@ class _DetailCharState extends State<DetailChar> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      characterInfo(
-                          'portrayed : ', data[position].portrayed.toString()),
-                      buildDivider(300),
-                      characterInfo(
-                          'Nickname : ', data[position].nickname.toString()),
-                      buildDivider(300),
-                      characterInfo('Appeared in : ',
-                          data[position].appearance!.join(', ')),
-                      buildDivider(250),
-                      buildDivider(280),
-                      characterInfo('Actor/Actress : ',
-                          data[position].nickname.toString()),
-                      buildDivider(235),
-                      characterInfo(
-                          'Job : ', data[position].occupation!.join(',')),
+                      // characterInfo(
+                      //     'portrayed : ', data[position].portrayed.toString()),
+                      // buildDivider(300),
+                      // characterInfo(
+                      //     'Nickname : ', data[position].nickname.toString()),
+                      // buildDivider(300),
+                      // characterInfo('Appeared in : ',
+                      //     data[position].appearance!.join(', ')),
+                      // buildDivider(250),
+                      // buildDivider(280),
+                      // characterInfo('Actor/Actress : ',
+                      //     data[position].nickname.toString()),
+                      // buildDivider(235),
+                      // characterInfo(
+                      //     'Job : ', data[position].occupation!.join(',')),
                       buildDivider(315),
                       SizedBox(
                         height: 20,
@@ -65,24 +67,24 @@ class _DetailCharState extends State<DetailChar> {
 
   buildSliverAppBar() {
     return SliverAppBar(
-      expandedHeight: 600,
-      pinned: true,
-      stretch: true,
-      // backgroundColor: MyColors.dark_100,
-      flexibleSpace: FlexibleSpaceBar(
-        title: Text(
-          data[position].name.toString(),
-          // style: TextStyle(color: MyColors.white),
-        ),
-        background: Hero(
-          tag: data[position].charId.toString(),
-          child: Image.network(
-            data[position].img.toString(),
-            fit: BoxFit.cover,
-          ),
-        ),
-      ),
-    );
+        // expandedHeight: 600,
+        // pinned: true,
+        // stretch: true,
+        // // backgroundColor: MyColors.dark_100,
+        // flexibleSpace: FlexibleSpaceBar(
+        //   title: Text(
+        //     data[position].name.toString(),
+        //     // style: TextStyle(color: MyColors.white),
+        //   ),
+        //   background: Hero(
+        //     tag: data[position].charId.toString(),
+        //     child: Image.network(
+        //       data[position].img.toString(),
+        //       fit: BoxFit.cover,
+        //     ),
+        //     ),
+        //   ),
+        );
   }
 
   characterInfo(String title, String join) {

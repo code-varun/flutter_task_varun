@@ -4,6 +4,8 @@ import 'package:tudo_task/providers/buttomnavbarprovider.dart';
 import 'package:tudo_task/providers/charprovider.dart';
 import 'package:tudo_task/views/buttomnavbar.dart';
 
+import 'providers/index.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -17,7 +19,9 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => BottomNavigationBarProvider()),
-        ChangeNotifierProvider(create: (_) => CharProvider())
+        ChangeNotifierProvider(create: (_) => CharProvider()),
+        ChangeNotifierProvider(create: (_) => HomeProvider())
+
       ],
       child: MaterialApp(
           title: 'Flutter Demo',

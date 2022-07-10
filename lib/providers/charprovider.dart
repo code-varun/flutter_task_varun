@@ -4,7 +4,7 @@ import 'package:tudo_task/services/apiservices.dart';
 
 class CharProvider extends ChangeNotifier {
   bool loadinglist = false;
-  bool listfinished = true;
+  // bool listfinished = true;
   List<Users> temp = [];
   List<Users> char = [];
   fetchdata(context, String limit, String offset) async {
