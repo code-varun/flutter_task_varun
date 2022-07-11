@@ -1,16 +1,16 @@
-import 'dart:convert';
+
 
 import 'package:http/http.dart' show Client;
 import 'package:tudo_task/models/charmodel.dart';
-import 'package:tudo_task/models/index.dart';
+
+
 import 'package:tudo_task/utils/constant.dart';
+
 
 class GetData {
   static var client = Client();
-  int page = 0;
-  String? query = "doctor";
+
   final String apiUrl = Endpoint().char_url;
-  final String bookUrl = Endpoint().BookUrl;
 
   Future<List<Users>> fetchChardata(String limit, offset) async {
     List<Users> chars = [];
@@ -25,4 +25,3 @@ class GetData {
     return chars;
   }
 }
-

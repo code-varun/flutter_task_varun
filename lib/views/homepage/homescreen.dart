@@ -67,9 +67,17 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
           appBar: AppBar(
+             backgroundColor: Colors.white,
+    // elevation: 0.0,
             centerTitle: true,
-            title: Text("Books"),
-            actions: [IconButton(onPressed: null, icon: Icon(Icons.search))],
+            title: Text("Books",
+            
+              style: TextStyle(color: Colors.blue, fontWeight: FontWeight.w600),
+            )
+            
+            
+            ,
+            // actions: [IconButton(onPressed: null, icon: Icon(Icons.search))],
           ),
           // floatingActionButton: _floatingActionWidget(),
           body: Column(

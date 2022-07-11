@@ -1,1 +1,1 @@
-export 'package:tudo_task/providers/home_provider.dart';
+export 'package:tudo_task/providers/homeprovider.dart';

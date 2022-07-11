@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:tudo_task/providers/buttomnavbarprovider.dart';
 import 'package:tudo_task/providers/charprovider.dart';
 import 'package:tudo_task/views/buttomnavbar.dart';
+import 'package:tudo_task/views/splash.dart';
 
 import 'providers/index.dart';
 
@@ -28,9 +29,12 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           theme: new ThemeData(
             primarySwatch: Colors.blue,
-            brightness: Brightness.dark,
+            
           ),
-          home: BottomNavBar()),
+          home: NewSplash()
+         
+          
+          ),
     );
   }
 }

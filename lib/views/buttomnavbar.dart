@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:tudo_task/providers/buttomnavbarprovider.dart';
-import 'package:tudo_task/views/homepage/home_screen.dart';
+import 'package:tudo_task/views/homepage/homescreen.dart';
+import 'package:tudo_task/views/newspage/homepage.dart';
 
-import 'package:tudo_task/views/homepage/homepage.dart';
-import 'package:tudo_task/views/homepage/homepage1.dart';
-import 'package:tudo_task/views/maps/tudomaps.dart';
+
+
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({Key? key}) : super(key: key);
@@ -22,10 +22,10 @@ class _BottomNavBarState extends State<BottomNavBar> {
   }
 
   List<dynamic> data = [
-    Icon(Icons.home),
-    Icon(Icons.map),
+    Icon(Icons.menu_book_rounded),
+    Icon(Icons.newspaper_outlined)
   ];
-  List<String> title = ["Homepage", "Search"];
+  List<String> title = ["Books", "News "];
 
   @override
   Widget build(BuildContext context) {
@@ -34,15 +34,25 @@ class _BottomNavBarState extends State<BottomNavBar> {
     List<Widget> _widgetOptions = <Widget>[
       // HomePage(),
       // HomepageGyt(),
-      HomeScreen(),
-      FlutterMap(),
+      // FlutterMap(),
+      // New Screens for Infedis Infotech LLP task 
+      // list of books homescreen
+       HomeScreen(),
+// Top news Screen for Infedis Infotech LLP task
+// Newspage()
+HomePage()
+
+
+     
+
     ];
     return Scaffold(
       body: Center(
         child: _widgetOptions.elementAt(provider.currentIndex),
       ),
       bottomNavigationBar: Material(
-        color: Color.fromRGBO(22, 21, 26, 1),
+        color: Colors.grey,
+        // Color.fromRGBO(22, 21, 26, 1),
         child: Container(
           height: 70,
           width: MediaQuery.of(context).size.width,
@@ -64,8 +74,8 @@ class _BottomNavBarState extends State<BottomNavBar> {
                   gradient: i == provider.currentIndex
                       ? LinearGradient(
                           colors: [
-                              Color.fromARGB(255, 57, 117, 113),
-                              Color.fromARGB(255, 62, 182, 226)
+                            Colors.blue,
+                            Colors.blueAccent
                             ],
                           begin: Alignment.topCenter,
                           end: Alignment.bottomCenter)
